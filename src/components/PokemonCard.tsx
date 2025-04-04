@@ -10,9 +10,10 @@ const pokemonList = [
     },
     {
         name: "mew",
-        imgSrc:  
+         
         
     },
+
 ];
 
 function PokemonCard() {
