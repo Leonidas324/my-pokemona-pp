@@ -19,21 +19,20 @@ const pokemonList = [
 function PokemonCard() {
 
  const pokemon = pokemonList[1];
- return (
+ return pokemon.imgSrc ? (
 
  <figure>
-  {pokemon.imgSrc ? (
- <img 
-    src= "https://raw.githubuser.content.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-    alt= "bulbasaur"
-    
-    />
+  
+ <img src= {pokemon.imgSrc}  
+    alt= {pokemon.name} />
+   </figure>
 
   ) : (
+    <figure>
  <p>???</p>
  
  
-)}
+
   <figcaption>{pokemon.name}</figcaption>
  </figure>
   );
