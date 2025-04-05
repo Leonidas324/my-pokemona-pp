@@ -1,7 +1,12 @@
 
 
+interface pokemon {
+ name: string;
+ imgsrc? : string;
 
-  
+
+}
+
   
   function PokemonCard({pokemon}) {
   
