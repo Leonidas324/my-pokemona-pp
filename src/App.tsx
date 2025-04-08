@@ -45,9 +45,12 @@ const handleMewClick = () => {
   setPokemonName ("mew");
 
 };
-
 return (
-   <div>
+  <div>
+       <PokemonCard pokemon={pokemon} />
+  
+
+   
    <button onClick={handleBulbasaurClick}>Bulbasaur</button> 
    <button onClick={handleMewClick}>Mew</button>
 
