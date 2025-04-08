@@ -24,33 +24,45 @@ const pokemonList =  [
 ];
 
 
+
+
 function App() {
-  return (
-  <div>
-    <PokemonCard pokemon={pokemonList[0]} />
-  </div>
-
-  );
-
-}
-
-
-function App () {
 const [ pokemonName, setPokemonName ] = useState("bulbasaur");
 const pokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
 
-if(pokemon == null) {
+  if(pokemon == null) {
    throw new Error("Invalid pokemon name");
 
-}
+  }
+
+  return (
+   <div>
+        <PokemonCard pokemon={pokemon} />
+   </div>
+  );
+
+const handleBulbasaurClick = () => {
+ 
+  setPokemonName("bulbasaur");
+};
+
+const handleMewClick = () => {
+  setPokemonName ("mew");
+
+};
 
 return (
-<div>
-  <PokemonCard pokemon={pokemon} />
+   <div>
+   <button onClick={handleBulbasaurClick}>Bulbasaur</button> 
+   <button onClick={handleMewClick}>Mew</button>
 
-</div>
+   </div>
+
+
 );
-
 }
+
+
+
 
 export default App;
