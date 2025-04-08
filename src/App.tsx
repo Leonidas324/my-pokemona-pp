@@ -35,12 +35,7 @@ const pokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
 
   }
 
-  return (
-   <div>
-        <PokemonCard pokemon={pokemon} />
-   </div>
-  );
-
+  
 const handleBulbasaurClick = () => {
  
   setPokemonName("bulbasaur");
