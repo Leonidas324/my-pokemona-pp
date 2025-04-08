@@ -1,7 +1,12 @@
-
+import {useState} from "react";
 import './App.css'
 
 import PokemonCard from "./components/PokemonCard.tsx";
+
+
+
+
+
 
 const pokemonList =  [
   {
@@ -12,6 +17,7 @@ const pokemonList =  [
   },
   {
    name: "mew",
+   imgSrc: "https://www.pokepedia.fr/images/thumb/e/e6/Mew-RFVF.png/800px-Mew-RFVF.png",
 
   }
 
@@ -28,5 +34,23 @@ function App() {
 
 }
 
+
+function App () {
+const [ pokemonName, setPokemonName ] = useState("bulbasaur");
+const pokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
+
+if(pokemon == null) {
+   throw new Error("Invalid pokemon name");
+
+}
+
+return (
+<div>
+  <PokemonCard pokemon={pokemon} />
+
+</div>
+);
+
+}
 
 export default App;
